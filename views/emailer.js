@@ -1,7 +1,7 @@
-var nodemailer = require('nodemailer');
+//var nodemailer = require('nodemailer');
 alert("Test");
 
-var transporter = nodemailer.createTransport({
+/*var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'breazehomeonboarding@gmail.com',
@@ -23,4 +23,4 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log('Email sent: ' + info.response);
   }
 });
-
+*/
