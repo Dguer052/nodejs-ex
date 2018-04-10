@@ -11,7 +11,36 @@
 
 </head>
 <body>
-<script src="/emailer.js"></script>
+<script>
+alert("Derp");
+
+var nodemailer = require('nodemailer');
+alert("Derp2");
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'breazehomeonboarding@gmail.com',
+    pass: 'Breaze123'
+  }
+});
+alert("Derp3");
+var mailOptions = {
+  from: 'breazehomeonboarding@gmail.com',
+  to: 'breazehomeonboarding@gmail.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+alert("Derp4");
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
+alert("Test");
+</script>
 Hello World
 </body>
 </html>
